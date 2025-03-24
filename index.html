@@ -1,174 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics 代码放在最前面 -->
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JXZM7Y60XE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JXZM7Y60XE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-JXZM7Y60XE');
-</script>
+        gtag('config', 'G-JXZM7Y60XE');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Match 3 Game Free - Best Online Puzzle Game 2024 | Play Now!</title>
-    <meta name="description" content="Play Match 3 Game Free online - The most addictive matching puzzle game with stunning graphics and 100+ levels. No download needed, play instantly in browser. Perfect for all ages!">
-    <meta name="keywords" content="match 3 game, free puzzle game, online matching game, browser game, free online game">
+    <title>Best Match 3 Games Collection 2024 - Play Free Online | Match3Games</title>
+    <meta name="description" content="Play the best collection of free Match 3 games online. Find candy crush style games, jewel games, bubble shooters and more. No download needed, play instantly in browser!">
+    <meta name="keywords" content="match 3 games, free puzzle games, online matching games, candy crush games, jewel games, bubble shooter">
     <link rel="canonical" href="https://match3games.online" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://match3games.online">
-    <meta property="og:title" content="Match 3 Game Free - Best Online Puzzle Game">
-    <meta property="og:description" content="Play the best free Match 3 puzzle game online. No download required!">
-    <meta property="og:image" content="https://match3games.online/images/game-preview.jpg">
+    <meta property="og:title" content="Best Match 3 Games Collection - Free Online Puzzle Games">
+    <meta property="og:description" content="Play 100+ free Match 3 puzzle games online. New games added regularly. No download required!">
+    <meta property="og:image" content="https://match3games.online/images/games-preview.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://match3games.online">
-    <meta property="twitter:title" content="Match 3 Game Free - Best Online Puzzle Game">
-    <meta property="twitter:description" content="Play the best free Match 3 puzzle game online. No download required!">
-    <meta property="twitter:image" content="https://match3games.online/images/game-preview.jpg">
+    <meta property="twitter:title" content="Best Match 3 Games Collection - Free Online Puzzle Games">
+    <meta property="twitter:description" content="Play 100+ free Match 3 puzzle games online. New games added regularly. No download required!">
+    <meta property="twitter:image" content="https://match3games.online/images/games-preview.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --apple-blue: #007AFF;
-            --apple-gray: #8E8E93;
-            --apple-green: #34C759;
+            --primary-color: #FF6B6B;
+            --secondary-color: #4ECDC4;
+            --accent-color: #45B7D1;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
+        .game-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .play-button {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            transition: all 0.3s ease;
+        }
+        .play-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
     </style>
 
-    <!-- Schema.org markup for Google -->
+    <!-- Schema.org markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Match 3 Game Free",
-      "description": "An addictive matching puzzle game with colorful graphics and challenging levels",
-      "genre": ["Puzzle", "Casual", "Match 3"],
+      "@type": "WebSite",
+      "name": "Match3Games",
+      "description": "The best collection of free Match 3 puzzle games online",
       "url": "https://match3games.online",
-      "inLanguage": "en",
-      "playMode": "SinglePlayer",
-      "gamePlatform": "Browser",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://match3games.online/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     }
     </script>
 </head>
 <body class="bg-gray-50">
-    <header class="bg-white shadow-sm">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <ul class="flex justify-center space-x-6 text-gray-600">
-                <li><a href="#how-to-play" class="hover:text-[#007AFF]">How to Play</a></li>
-                <li><a href="#features" class="hover:text-[#007AFF]">Features</a></li>
-                <li><a href="#about" class="hover:text-[#007AFF]">About</a></li>
-            </ul>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-[--primary-color]">Match3Games</a>
+                <ul class="flex space-x-6 text-gray-600">
+                    <li><a href="#popular" class="hover:text-[--primary-color]">All Games</a></li>
+                </ul>
+            </div>
         </nav>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 text-center">
-                Play Match 3 Game Free Online
-            </h1>
-            <p class="mt-4 text-xl text-gray-600 text-center">
-                Experience the Most Addictive Matching Puzzle Adventure - No Download Required!
-            </p>
-        </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <article class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="aspect-w-16 aspect-h-9 relative">
-                <iframe 
-                    src="https://cdn.htmlgames.com/ZoobiesMatch/"
-                    class="w-full h-[600px] md:h-[800px]"
-                    frameborder="0"
-                    allowfullscreen
-                    loading="lazy"
-                    title="Match 3 Game Free Online">
-                </iframe>
-            </div>
-        </article>
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Best Match 3 Games Collection
+            </h1>
+            <p class="text-xl text-gray-600">
+                Play 100+ Free Match 3 Games Online - No Download Required!
+            </p>
+        </section>
 
-        <article id="how-to-play" class="mt-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                How to Play Match 3 Game Free
-            </h2>
+        <!-- Popular Games Section -->
+        <section id="popular" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">All Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Game 1: Multisquare -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden" data-category="jewel,puzzle">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            src="https://play.famobi.com/multisquare"
+                            class="w-full h-[300px]"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Multisquare">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Multisquare</h3>
+                        <p class="text-gray-600 mt-2">Match colorful squares in this modern puzzle challenge!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--secondary-color] text-white px-3 py-1 rounded-full text-sm">Popular</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.7</span>
+                            </div>
+                            <button class="play-button text-white px-6 py-2 rounded-full font-semibold">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 2: Totemia Cursed Marbles -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden" data-category="jewel,puzzle">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            src="https://play.famobi.com/totemia-cursed-marbles"
+                            class="w-full h-[300px]"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Totemia: Cursed Marbles">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Totemia: Cursed Marbles</h3>
+                        <p class="text-gray-600 mt-2">Break the curse in this mystical marble matching adventure!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--accent-color] text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.9</span>
+                            </div>
+                            <button class="play-button text-white px-6 py-2 rounded-full font-semibold">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 3: Bubble Woods -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden" data-category="bubble">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            src="https://play.famobi.com/bubble-woods"
+                            class="w-full h-[300px]"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Bubble Woods">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Bubble Woods</h3>
+                        <p class="text-gray-600 mt-2">Pop colorful bubbles in this enchanted forest adventure!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--primary-color] text-white px-3 py-1 rounded-full text-sm">New</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.8</span>
+                            </div>
+                            <button class="play-button text-white px-6 py-2 rounded-full font-semibold">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 4: Jewel Aquarium -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden" data-category="jewel,puzzle">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            src="https://play.famobi.com/jewel-aquarium"
+                            class="w-full h-[300px]"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Jewel Aquarium">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Jewel Aquarium</h3>
+                        <p class="text-gray-600 mt-2">Dive into an underwater matching paradise!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--secondary-color] text-white px-3 py-1 rounded-full text-sm">Popular</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.6</span>
+                            </div>
+                            <button class="play-button text-white px-6 py-2 rounded-full font-semibold">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 添加 Food Rush -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden" data-category="fruit">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            src="https://play.famobi.com/food-rush"
+                            class="w-full h-[300px]"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Food Rush">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Food Rush</h3>
+                        <p class="text-gray-600 mt-2">Match delicious treats in this tasty food matching adventure!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--secondary-color] text-white px-3 py-1 rounded-full text-sm">Popular</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.8</span>
+                            </div>
+                            <button class="play-button text-white px-6 py-2 rounded-full font-semibold">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 添加 Zoobies Match -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden" data-category="jewel,puzzle">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            src="https://cdn.htmlgames.com/ZoobiesMatch/"
+                            class="w-full h-[300px]"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Zoobies Match">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Zoobies Match</h3>
+                        <p class="text-gray-600 mt-2">Connect cute zoo animals in this adorable matching puzzle!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--accent-color] text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.9</span>
+                            </div>
+                            <button class="play-button text-white px-6 py-2 rounded-full font-semibold">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 7: Diamond Rush 2 -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden" data-category="jewel,puzzle">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            src="https://play.famobi.com/diamond-rush-2"
+                            class="w-full h-[300px]"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Diamond Rush 2">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Diamond Rush 2</h3>
+                        <p class="text-gray-600 mt-2">Match sparkling diamonds in this dazzling puzzle adventure!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--accent-color] text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.8</span>
+                            </div>
+                            <button class="play-button text-white px-6 py-2 rounded-full font-semibold">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 8: Garden Bloom -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden" data-category="jewel,puzzle">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            src="https://play.famobi.com/garden-bloom"
+                            class="w-full h-[300px]"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Garden Bloom">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Garden Bloom</h3>
+                        <p class="text-gray-600 mt-2">Create beautiful flower matches in this relaxing garden puzzle!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--secondary-color] text-white px-3 py-1 rounded-full text-sm">Popular</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.7</span>
+                            </div>
+                            <button class="play-button text-white px-6 py-2 rounded-full font-semibold">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 9: Garden Match 3D -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden" data-category="jewel,puzzle">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            src="https://play.famobi.com/garden-match-3d"
+                            class="w-full h-[300px]"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Garden Match 3D">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Garden Match 3D</h3>
+                        <p class="text-gray-600 mt-2">Experience 3D matching in this stunning garden adventure!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--primary-color] text-white px-3 py-1 rounded-full text-sm">New</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.9</span>
+                            </div>
+                            <button class="play-button text-white px-6 py-2 rounded-full font-semibold">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">About Match3Games</h2>
             <div class="prose max-w-none text-gray-600">
+                <p class="text-lg mb-4">
+                    Welcome to Match3Games, your ultimate destination for the best free Match 3 puzzle games! Our carefully curated collection features hundreds of high-quality matching games that you can play instantly in your browser, with no downloads or installations required.
+                </p>
+                <p class="text-lg mb-4">
+                    From classic jewel-matching adventures to modern candy-crushing challenges, we offer something for everyone. Our games are perfect for quick breaks or long gaming sessions, featuring beautiful graphics, engaging gameplay, and regular updates with new content.
+                </p>
                 <p class="text-lg">
-                    Start your puzzle adventure by matching three or more identical items to clear them from the board. Create spectacular combos and use special power-ups to achieve higher scores. The more matches you make, the more points you earn! Perfect for both casual players and puzzle enthusiasts.
+                    All our games are free to play and optimized for both desktop and mobile devices. Start your puzzle adventure today and join millions of players enjoying our Match 3 games!
                 </p>
             </div>
-        </article>
-
-        <article id="features" class="mt-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                Amazing Game Features
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-[#007AFF] mb-3">
-                        Stunning Graphics
-                    </h3>
-                    <p class="text-gray-600">
-                        Enjoy beautiful visuals and smooth animations that make matching more fun than ever.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-[#34C759] mb-3">
-                        Multiple Levels
-                    </h3>
-                    <p class="text-gray-600">
-                        Progress through challenging levels, each with unique objectives and obstacles.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-[#8E8E93] mb-3">
-                        Free to Play
-                    </h3>
-                    <p class="text-gray-600">
-                        No registration or download required. Start playing instantly in your browser!
-                    </p>
-                </div>
-            </div>
-        </article>
-
-        <article id="about" class="mt-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                About Match 3 Game Free
-            </h2>
-            <div class="text-lg text-gray-600 space-y-4">
-                <p>
-                    Welcome to the ultimate Match 3 gaming experience! Our free online puzzle game combines classic matching mechanics with modern features and stunning visuals. Perfect for players of all ages, this browser-based game offers endless entertainment without any downloads or installations required.
-                </p>
-                <p>
-                    With multiple challenging levels, special power-ups, and engaging objectives, you'll find yourself immersed in hours of matching fun. Whether you're a casual gamer looking for a quick break or a puzzle enthusiast seeking a new challenge, Match 3 Game Free provides the perfect balance of entertainment and strategic thinking.
-                </p>
-            </div>
-        </article>
+        </section>
     </main>
 
-    <footer class="bg-gray-100 mt-12">
+    <footer class="bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-lg font-semibold text-gray-900">Quick Links</h3>
                     <ul class="mt-4 space-y-2">
-                        <li><a href="#how-to-play" class="text-gray-600 hover:text-[#007AFF]">How to Play</a></li>
-                        <li><a href="#features" class="text-gray-600 hover:text-[#007AFF]">Game Features</a></li>
-                        <li><a href="#about" class="text-gray-600 hover:text-[#007AFF]">About the Game</a></li>
+                        <li><a href="#popular" class="text-gray-600 hover:text-[--primary-color]">Popular Games</a></li>
                     </ul>
                 </div>
                 <div>
                     <p class="text-gray-600">
-                        © 2024 Match3games.online - The Best Free Match 3 Game. Play instantly in your browser!
+                        © 2024 Match3Games - The Best Free Match 3 Games Collection. New games added weekly!
                     </p>
                 </div>
             </div>
