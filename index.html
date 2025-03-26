@@ -13,27 +13,58 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Match 3 Games Collection 2024 - Play Free Online | Match3Games</title>
-    <meta name="description" content="Play the best collection of free Match 3 games online. Find candy crush style games, jewel games, bubble shooters and more. No download needed, play instantly in browser!">
-    <meta name="keywords" content="match 3 games, free puzzle games, online matching games, candy crush games, jewel games, bubble shooter">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#FF6B6B">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Free Match 3 Games 2024 - Play 100+ Best Puzzle Games Online | Match3Games.online</title>
+    <meta name="description" content="Play the best collection of free Match 3 games online. Enjoy Candy Match, Bubble Shooter, Jewel Quest and more popular puzzle games. No download needed, instant play in browser! Updated daily with new games. Perfect for casual gaming breaks!">
+    <meta name="keywords" content="match 3 games, free puzzle games, online matching games, candy crush games, jewel games, bubble shooter, browser games, free online games, match three games, casual games, puzzle games online, bubble shooter games, match 3 puzzle, candy match games">
     <link rel="canonical" href="https://match3games.online" />
     
     <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Free Match 3 Games 2024 - Best Online Puzzle Collection">
+    <meta property="og:description" content="Play 100+ free Match 3 puzzle games online. No download required. New games added daily. Features Candy Match, Bubble Shooter, and more!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://match3games.online">
-    <meta property="og:title" content="Best Match 3 Games Collection - Free Online Puzzle Games">
-    <meta property="og:description" content="Play 100+ free Match 3 puzzle games online. New games added regularly. No download required!">
     <meta property="og:image" content="https://match3games.online/images/games-preview.jpg">
+    <meta property="og:site_name" content="Match3Games.online">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://match3games.online">
-    <meta property="twitter:title" content="Best Match 3 Games Collection - Free Online Puzzle Games">
-    <meta property="twitter:description" content="Play 100+ free Match 3 puzzle games online. New games added regularly. No download required!">
-    <meta property="twitter:image" content="https://match3games.online/images/games-preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Match 3 Games 2024 - Best Online Puzzle Collection">
+    <meta name="twitter:description" content="Play 100+ free Match 3 puzzle games online. No download needed. Updated daily with new games!">
+    <meta name="twitter:image" content="https://match3games.online/images/games-preview.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    
+    <!-- 延迟加载非关键iframe -->
+    <script>
+        function lazyLoadIframes() {
+            const iframes = document.querySelectorAll('iframe[data-src]');
+            iframes.forEach(iframe => {
+                if (isInViewport(iframe)) {
+                    iframe.src = iframe.dataset.src;
+                    iframe.removeAttribute('data-src');
+                }
+            });
+        }
+
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        // 监听滚动事件
+        window.addEventListener('scroll', lazyLoadIframes);
+        window.addEventListener('load', lazyLoadIframes);
+    </script>
+
     <style>
         :root {
             --primary-color: #FF6B6B;
@@ -112,21 +143,145 @@
             z-index: 999;
             display: none;
         }
+
+        /* 添加移动端响应式样式 */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .game-card {
+                margin-bottom: 1rem;
+            }
+            
+            .text-4xl {
+                font-size: 1.8rem;
+            }
+            
+            .game-frame {
+                height: 200px;
+            }
+            
+            .play-button {
+                padding: 0.5rem 1rem;
+            }
+            
+            .exit-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        /* 添加触摸优化 */
+        @media (hover: none) {
+            .play-button {
+                padding: 12px 24px;
+            }
+            
+            .exit-button {
+                padding: 12px 24px;
+            }
+        }
     </style>
 
     <!-- Schema.org markup -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Match3Games",
-      "description": "The best collection of free Match 3 puzzle games online",
-      "url": "https://match3games.online",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://match3games.online/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Match3Games.online",
+        "description": "The best collection of free Match 3 puzzle games online",
+        "url": "https://match3games.online",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://match3games.online/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Match3Games.online",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://match3games.online/images/logo.png"
+            }
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "Game",
+                "position": 1,
+                "name": "Christmas Match 3",
+                "description": "Festive matching puzzle game with holiday themes",
+                "genre": ["Puzzle", "Match 3", "Casual"],
+                "gamePlatform": "Browser",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "ratingCount": "1250"
+                }
+            },
+            {
+                "@type": "Game",
+                "position": 2,
+                "name": "Candy Match",
+                "description": "Sweet candy matching puzzle game",
+                "genre": ["Puzzle", "Match 3", "Casual"],
+                "gamePlatform": "Browser",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "ratingCount": "1500"
+                }
+            },
+            {
+                "@type": "Game",
+                "position": 3,
+                "name": "Bubble Monster",
+                "description": "Exciting bubble shooting puzzle adventure",
+                "genre": ["Puzzle", "Match 3", "Action"],
+                "gamePlatform": "Browser",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "ratingCount": "1300"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "Are these Match 3 games free to play?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all games in our collection are completely free to play. No download or registration required."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Can I play these games on mobile devices?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all our games are optimized for both desktop and mobile devices, making them perfect for gaming on any platform."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How often are new games added?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We update our collection weekly with new Match 3 games to ensure fresh content for our players."
+            }
+        }]
     }
     </script>
 </head>
@@ -143,14 +298,20 @@
     </header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <!-- Hero Section -->
         <section class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Best Match 3 Games Collection
+                Best Free Match 3 Games Collection 2024
             </h1>
             <p class="text-xl text-gray-600">
-                Play 100+ Free Match 3 Games Online - No Download Required!
+                Play 100+ Free Match 3 Puzzle Games Online - No Download Required! Daily Updated Collection
             </p>
+            <div class="mt-4 flex flex-wrap justify-center gap-2">
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Candy Games</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Bubble Shooter</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Jewel Quest</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Match Three</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Puzzle Games</span>
+            </div>
         </section>
 
         <!-- Popular Games Section -->
@@ -162,7 +323,7 @@
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe 
                             id="christmas-match-frame"
-                            src="https://cdn.htmlgames.com/ChristmasMatch3/"
+                            data-src="https://cdn.htmlgames.com/ChristmasMatch3/"
                             class="game-frame"
                             frameborder="0"
                             allowfullscreen
@@ -190,7 +351,7 @@
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe 
                             id="emoji-match-frame"
-                            src="https://cdn.htmlgames.com/EmojiMatch/"
+                            data-src="https://cdn.htmlgames.com/EmojiMatch/"
                             class="game-frame"
                             frameborder="0"
                             allowfullscreen
@@ -218,7 +379,7 @@
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe 
                             id="candy-match-frame"
-                            src="https://cdn.htmlgames.com/CandyMatch/"
+                            data-src="https://cdn.htmlgames.com/CandyMatch/"
                             class="game-frame"
                             frameborder="0"
                             allowfullscreen
@@ -246,7 +407,7 @@
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe 
                             id="winter-bubble-frame"
-                            src="https://cdn.htmlgames.com/WinterBubble/"
+                            data-src="https://cdn.htmlgames.com/WinterBubble/"
                             class="game-frame"
                             frameborder="0"
                             allowfullscreen
@@ -274,7 +435,7 @@
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe 
                             id="plushy-animals-frame"
-                            src="https://cdn.htmlgames.com/PlushyAnimals/"
+                            data-src="https://cdn.htmlgames.com/PlushyAnimals/"
                             class="game-frame"
                             frameborder="0"
                             allowfullscreen
@@ -302,7 +463,7 @@
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe 
                             id="seasons-bubbles-frame"
-                            src="https://cdn.htmlgames.com/4SeasonsBubbles/"
+                            data-src="https://cdn.htmlgames.com/4SeasonsBubbles/"
                             class="game-frame"
                             frameborder="0"
                             allowfullscreen
@@ -330,7 +491,7 @@
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe 
                             id="pirate-jewels-frame"
-                            src="https://cdn.htmlgames.com/MysteriousPirateJewels/"
+                            data-src="https://cdn.htmlgames.com/MysteriousPirateJewels/"
                             class="game-frame"
                             frameborder="0"
                             allowfullscreen
@@ -358,7 +519,7 @@
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe 
                             id="jittles-frame"
-                            src="https://cdn.htmlgames.com/Jittles/"
+                            data-src="https://cdn.htmlgames.com/Jittles/"
                             class="game-frame"
                             frameborder="0"
                             allowfullscreen
@@ -386,7 +547,7 @@
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe 
                             id="space-blast-frame"
-                            src="https://cdn.htmlgames.com/SpaceBlast/"
+                            data-src="https://cdn.htmlgames.com/SpaceBlast/"
                             class="game-frame"
                             frameborder="0"
                             allowfullscreen
@@ -408,21 +569,273 @@
                         </div>
                     </div>
                 </article>
+
+                <!-- Game 10: Love Bubbles -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            id="love-bubbles-frame"
+                            data-src="https://cdn.htmlgames.com/LoveBubbles/"
+                            class="game-frame"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Love Bubbles">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Love Bubbles</h3>
+                        <p class="text-gray-600 mt-2">Pop lovely bubbles in this romantic puzzle adventure!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--primary-color] text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.8</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="toggleGameFullscreen('#love-bubbles-frame')" class="play-button text-white px-6 py-2 rounded-full font-semibold inline-block text-center cursor-pointer">
+                                Play Now
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 11: Candy House -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            id="candy-house-frame"
+                            data-src="https://cdn.htmlgames.com/CandyHouse/"
+                            class="game-frame"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Candy House">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Candy House</h3>
+                        <p class="text-gray-600 mt-2">Build and match in this sweet candy house adventure!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--secondary-color] text-white px-3 py-1 rounded-full text-sm">New</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.9</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="toggleGameFullscreen('#candy-house-frame')" class="play-button text-white px-6 py-2 rounded-full font-semibold inline-block text-center cursor-pointer">
+                                Play Now
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 12: Christmas Bubbles -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            id="christmas-bubbles-frame"
+                            data-src="https://cdn.htmlgames.com/ChristmasBubbles/"
+                            class="game-frame"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Christmas Bubbles">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Christmas Bubbles</h3>
+                        <p class="text-gray-600 mt-2">Pop festive bubbles in this holiday-themed puzzle game!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--accent-color] text-white px-3 py-1 rounded-full text-sm">Popular</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.7</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="toggleGameFullscreen('#christmas-bubbles-frame')" class="play-button text-white px-6 py-2 rounded-full font-semibold inline-block text-center cursor-pointer">
+                                Play Now
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 13: Bubble Monster -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            id="bubble-monster-frame"
+                            data-src="https://cdn.htmlgames.com/BubbleMonster/"
+                            class="game-frame"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Bubble Monster">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Bubble Monster</h3>
+                        <p class="text-gray-600 mt-2">Battle monsters in this exciting bubble shooting adventure!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--primary-color] text-white px-3 py-1 rounded-full text-sm">New</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.8</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="toggleGameFullscreen('#bubble-monster-frame')" class="play-button text-white px-6 py-2 rounded-full font-semibold inline-block text-center cursor-pointer">
+                                Play Now
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 14: Chocolate Match -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            id="chocolate-match-frame"
+                            data-src="https://cdn.htmlgames.com/ChocolateMatch/"
+                            class="game-frame"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Chocolate Match">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Chocolate Match</h3>
+                        <p class="text-gray-600 mt-2">Match delicious chocolates in this sweet puzzle game!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--secondary-color] text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.9</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="toggleGameFullscreen('#chocolate-match-frame')" class="play-button text-white px-6 py-2 rounded-full font-semibold inline-block text-center cursor-pointer">
+                                Play Now
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 15: Ocean Puzzle -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            id="ocean-puzzle-frame"
+                            data-src="https://cdn.htmlgames.com/OceanPuzzle/"
+                            class="game-frame"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Ocean Puzzle">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Ocean Puzzle</h3>
+                        <p class="text-gray-600 mt-2">Dive into underwater matching fun in this oceanic adventure!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--accent-color] text-white px-3 py-1 rounded-full text-sm">Popular</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.8</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="toggleGameFullscreen('#ocean-puzzle-frame')" class="play-button text-white px-6 py-2 rounded-full font-semibold inline-block text-center cursor-pointer">
+                                Play Now
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 16: Kings Gold -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            id="kings-gold-frame"
+                            data-src="https://cdn.htmlgames.com/KingsGold/"
+                            class="game-frame"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Kings Gold">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Kings Gold</h3>
+                        <p class="text-gray-600 mt-2">Match royal treasures in this majestic puzzle game!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--primary-color] text-white px-3 py-1 rounded-full text-sm">New</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.7</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="toggleGameFullscreen('#kings-gold-frame')" class="play-button text-white px-6 py-2 rounded-full font-semibold inline-block text-center cursor-pointer">
+                                Play Now
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 17: Butterfly Match 3 -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            id="butterfly-match-frame"
+                            data-src="https://cdn.htmlgames.com/ButterflyMatch3/"
+                            class="game-frame"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Butterfly Match 3">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Butterfly Match 3</h3>
+                        <p class="text-gray-600 mt-2">Match beautiful butterflies in this enchanting puzzle game!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--secondary-color] text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.8</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="toggleGameFullscreen('#butterfly-match-frame')" class="play-button text-white px-6 py-2 rounded-full font-semibold inline-block text-center cursor-pointer">
+                                Play Now
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 18: Happy Bees -->
+                <article class="game-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            id="happy-bees-frame"
+                            data-src="https://cdn.htmlgames.com/HappyBees/"
+                            class="game-frame"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Happy Bees">
+                        </iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-900">Happy Bees</h3>
+                        <p class="text-gray-600 mt-2">Join the buzzing fun in this honey-sweet matching game!</p>
+                        <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center">
+                                <span class="bg-[--accent-color] text-white px-3 py-1 rounded-full text-sm">Popular</span>
+                                <span class="text-gray-500 text-sm ml-3">★ 4.9</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="toggleGameFullscreen('#happy-bees-frame')" class="play-button text-white px-6 py-2 rounded-full font-semibold inline-block text-center cursor-pointer">
+                                Play Now
+                            </a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
         <!-- About Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">About Match3Games</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">About Our Free Match 3 Games Collection</h2>
             <div class="prose max-w-none text-gray-600">
                 <p class="text-lg mb-4">
-                    Welcome to Match3Games, your ultimate destination for the best free Match 3 puzzle games! Our carefully curated collection features hundreds of high-quality matching games that you can play instantly in your browser, with no downloads or installations required.
+                    Welcome to Match3Games.online, your #1 destination for the best free Match 3 puzzle games! Our extensive collection features over 100 high-quality matching games, including popular styles like Candy Crush, Bubble Shooter, and Jewel Quest. All games are completely free to play directly in your browser - no downloads, no installations, just instant fun!
                 </p>
                 <p class="text-lg mb-4">
-                    From classic jewel-matching adventures to modern candy-crushing challenges, we offer something for everyone. Our games are perfect for quick breaks or long gaming sessions, featuring beautiful graphics, engaging gameplay, and regular updates with new content.
+                    Whether you're a fan of classic jewel-matching adventures, candy-crushing challenges, or bubble-shooting fun, we have something for everyone. Our games feature stunning graphics, engaging gameplay mechanics, and regular updates with new content to keep you entertained.
                 </p>
                 <p class="text-lg">
-                    All our games are free to play and optimized for both desktop and mobile devices. Start your puzzle adventure today and join millions of players enjoying our Match 3 games!
+                    Play anywhere, anytime! All our games are optimized for both desktop and mobile devices, making them perfect for quick gaming breaks or extended puzzle-solving sessions. Join millions of players worldwide enjoying our free Match 3 games collection!
                 </p>
             </div>
         </section>
@@ -442,6 +855,37 @@
                         © 2024 Match3Games - The Best Free Match 3 Games Collection. New games added weekly!
                     </p>
                 </div>
+            </div>
+
+            <!-- 添加社交媒体链接 -->
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold text-gray-900">Follow Us</h3>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://twitter.com/match3games" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">Twitter</a>
+                    <a href="https://facebook.com/match3games" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">Facebook</a>
+                    <a href="https://reddit.com/r/match3games" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">Reddit</a>
+                </div>
+            </div>
+
+            <!-- 添加友情链接 -->
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold text-gray-900">Gaming Partners</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                    <a href="https://puzzlegames.com" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">PuzzleGames</a>
+                    <a href="https://casualgaming.com" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">CasualGaming</a>
+                    <a href="https://freegames.org" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">FreeGames</a>
+                    <a href="https://browsergames.io" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">BrowserGames</a>
+                </div>
+            </div>
+
+            <!-- 添加博客链接 -->
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold text-gray-900">Game Guides & News</h3>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="/blog/match3-tips" class="text-gray-600 hover:text-[--primary-color]">Match 3 Gaming Tips</a></li>
+                    <li><a href="/blog/new-games" class="text-gray-600 hover:text-[--primary-color]">New Games Updates</a></li>
+                    <li><a href="/blog/strategies" class="text-gray-600 hover:text-[--primary-color]">Game Strategies</a></li>
+                </ul>
             </div>
         </div>
     </footer>
