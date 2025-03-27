@@ -13,57 +13,43 @@
     </script>
 
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#FF6B6B">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="your-verification-code" />
+    
+    <!-- SEO Meta Tags -->
     <title>Free Match 3 Games 2024 - Play 100+ Best Puzzle Games Online | Match3Games.online</title>
     <meta name="description" content="Play the best collection of free Match 3 games online. Enjoy Candy Match, Bubble Shooter, Jewel Quest and more popular puzzle games. No download needed, instant play in browser! Updated daily with new games. Perfect for casual gaming breaks!">
     <meta name="keywords" content="match 3 games, free puzzle games, online matching games, candy crush games, jewel games, bubble shooter, browser games, free online games, match three games, casual games, puzzle games online, bubble shooter games, match 3 puzzle, candy match games">
-    <link rel="canonical" href="https://match3games.online" />
+    
+    <!-- Canonical and Alternate URLs -->
+    <link rel="canonical" href="https://match3games.online/" />
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.match3games.online/" />
+    <link rel="alternate" hreflang="en" href="https://match3games.online/" />
+    <link rel="alternate" hreflang="x-default" href="https://match3games.online/" />
     
     <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://match3games.online/" />
     <meta property="og:title" content="Free Match 3 Games 2024 - Best Online Puzzle Collection">
     <meta property="og:description" content="Play 100+ free Match 3 puzzle games online. No download required. New games added daily. Features Candy Match, Bubble Shooter, and more!">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://match3games.online">
     <meta property="og:image" content="https://match3games.online/images/games-preview.jpg">
     <meta property="og:site_name" content="Match3Games.online">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://match3games.online/" />
     <meta name="twitter:title" content="Free Match 3 Games 2024 - Best Online Puzzle Collection">
     <meta name="twitter:description" content="Play 100+ free Match 3 puzzle games online. No download needed. Updated daily with new games!">
     <meta name="twitter:image" content="https://match3games.online/images/games-preview.jpg">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 预加载关键资源 -->
     <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-    
-    <!-- 延迟加载非关键iframe -->
-    <script>
-        function lazyLoadIframes() {
-            const iframes = document.querySelectorAll('iframe[data-src]');
-            iframes.forEach(iframe => {
-                if (isInViewport(iframe)) {
-                    iframe.src = iframe.dataset.src;
-                    iframe.removeAttribute('data-src');
-                }
-            });
-        }
-
-        function isInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-            );
-        }
-
-        // 监听滚动事件
-        window.addEventListener('scroll', lazyLoadIframes);
-        window.addEventListener('load', lazyLoadIframes);
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
         :root {
@@ -857,27 +843,6 @@
                 </div>
             </div>
 
-            <!-- 添加社交媒体链接 -->
-            <div class="mt-8">
-                <h3 class="text-lg font-semibold text-gray-900">Follow Us</h3>
-                <div class="flex space-x-4 mt-4">
-                    <a href="https://twitter.com/match3games" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">Twitter</a>
-                    <a href="https://facebook.com/match3games" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">Facebook</a>
-                    <a href="https://reddit.com/r/match3games" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">Reddit</a>
-                </div>
-            </div>
-
-            <!-- 添加友情链接 -->
-            <div class="mt-8">
-                <h3 class="text-lg font-semibold text-gray-900">Gaming Partners</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                    <a href="https://puzzlegames.com" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">PuzzleGames</a>
-                    <a href="https://casualgaming.com" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">CasualGaming</a>
-                    <a href="https://freegames.org" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">FreeGames</a>
-                    <a href="https://browsergames.io" target="_blank" rel="noopener" class="text-gray-600 hover:text-[--primary-color]">BrowserGames</a>
-                </div>
-            </div>
-
             <!-- 添加博客链接 -->
             <div class="mt-8">
                 <h3 class="text-lg font-semibold text-gray-900">Game Guides & News</h3>
@@ -954,6 +919,14 @@
                     }
                 }
             });
+
+            // 检查所有链接确保正确性
+            const links = document.getElementsByTagName('a');
+            for(let link of links) {
+                if(link.href.startsWith('http:')) {
+                    link.href = link.href.replace('http:', 'https:');
+                }
+            }
         });
     </script>
 </body>
