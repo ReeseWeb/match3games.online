@@ -3,7 +3,7 @@
 <head>
     <!-- Google Analytics 代码放在最前面 -->
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JXZM7Y60XE"></script>
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-JXZM7Y60XE"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -52,14 +52,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        :root {
-            --primary-color: #FF6B6B;
-            --secondary-color: #4ECDC4;
-            --accent-color: #45B7D1;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
+        /* 压缩CSS */
+        :root{--primary-color:#FF6B6B;--secondary-color:#4ECDC4;--accent-color:#45B7D1}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+        .game-frame{width:100%;height:300px;transition:all .3s ease}
+        .game-frame.fullscreen{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000;background:#fff}
         .game-card:hover {
             /* 删除这些效果 */
             /* transform: translateY(-5px); */
@@ -72,20 +69,6 @@
         .play-button:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        .game-frame {
-            width: 100%;
-            height: 300px;
-            transition: all 0.3s ease;
-        }
-        .game-frame.fullscreen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1000;
-            background: white;
         }
         .overlay {
             display: none;
@@ -269,6 +252,53 @@
             }
         }]
     }
+    </script>
+
+    <!-- 优化游戏加载 -->
+    <script>
+        // 分批加载游戏
+        function loadGames() {
+            const iframes = document.querySelectorAll('iframe[data-src]');
+            let loadedCount = 0;
+            
+            function loadNextBatch() {
+                const batch = Array.from(iframes).slice(loadedCount, loadedCount + 3);
+                batch.forEach(iframe => {
+                    if (!iframe.src && isInViewport(iframe)) {
+                        iframe.src = iframe.dataset.src;
+                    }
+                });
+                loadedCount += 3;
+                
+                if (loadedCount < iframes.length) {
+                    setTimeout(loadNextBatch, 1000);
+                }
+            }
+            
+            loadNextBatch();
+        }
+
+        // 优化视口检查函数
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return rect.top >= 0 && rect.top <= window.innerHeight;
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            loadGames();
+            
+            // 使用节流函数优化滚动事件
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(function() {
+                        loadGames();
+                        scrollTimeout = null;
+                    }, 100);
+                }
+            });
+        });
     </script>
 </head>
 <body class="bg-gray-50">
