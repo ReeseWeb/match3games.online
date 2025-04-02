@@ -1,12 +1,9 @@
 # 启用重写引擎
 RewriteEngine On
 
-# 强制使用HTTPS
+# 合并 HTTPS 和 www 重定向（替换之前的两个重定向规则）
+RewriteCond %{HTTP_HOST} !^www\. [OR]
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# 强制使用www
-RewriteCond %{HTTP_HOST} ^match3games\.online [NC]
 RewriteRule ^(.*)$ https://www.match3games.online/$1 [L,R=301]
 
 # 删除尾部斜杠

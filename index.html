@@ -911,25 +911,9 @@
                 exitButton.style.display = 'block';
                 overlay.style.display = 'block';
                 
-                // 添加ESC键监听
-                const escHandler = function(e) {
-                    if (e.key === 'Escape') {
-                        exitGame();
-                        document.removeEventListener('keydown', escHandler);
-                    }
-                };
-                document.addEventListener('keydown', escHandler);
-                
                 // 添加点击事件
-                exitButton.onclick = () => {
-                    exitGame();
-                    document.removeEventListener('keydown', escHandler);
-                };
-                
-                overlay.onclick = () => {
-                    exitGame();
-                    document.removeEventListener('keydown', escHandler);
-                };
+                exitButton.onclick = exitGame;
+                overlay.onclick = exitGame;
             } else {
                 exitGame();
             }
@@ -937,7 +921,7 @@
 
         // 确保在页面加载完成后初始化事件监听
         document.addEventListener('DOMContentLoaded', function() {
-            // 全局 ESC 键监听
+            // 全局 ESC 键监听（只保留一个 ESC 键处理逻辑）
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') {
                     const activeIframe = document.querySelector('.game-frame.fullscreen');
@@ -955,6 +939,10 @@
             for(let link of links) {
                 if(link.href.startsWith('http:')) {
                     link.href = link.href.replace('http:', 'https:');
+                }
+                // 确保所有绝对链接使用 www 版本
+                if(link.href.includes('match3games.online') && !link.href.includes('www.match3games.online')) {
+                    link.href = link.href.replace('match3games.online', 'www.match3games.online');
                 }
             }
         });
