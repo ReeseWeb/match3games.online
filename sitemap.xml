@@ -1,27 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- 主页 -->
     <url>
         <loc>https://www.match3games.online/</loc>
         <lastmod>2024-01-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <!-- 游戏分类页面 -->
     <url>
-        <loc>https://www.match3games.online/blog/match3-tips</loc>
+        <loc>https://www.match3games.online/categories/candy-games</loc>
         <lastmod>2024-01-20</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.match3games.online/categories/bubble-shooter</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.match3games.online/categories/jewel-games</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- 游戏详情页面 -->
+    <url>
+        <loc>https://www.match3games.online/games/christmas-match-3</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.match3games.online/blog/new-games</loc>
+        <loc>https://www.match3games.online/games/candy-match</loc>
         <lastmod>2024-01-20</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.match3games.online/blog/strategies</loc>
+        <loc>https://www.match3games.online/games/bubble-monster</loc>
         <lastmod>2024-01-20</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- 帮助页面 -->
+    <url>
+        <loc>https://www.match3games.online/help/how-to-play</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.match3games.online/help/faq</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>

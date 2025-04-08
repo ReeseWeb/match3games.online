@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics 代码放在最前面 -->
+    <!-- Google tag (gtag.js) -->
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-T89XCTZC54"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-T89XCTZC54');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match 3 Game Categories - Free Online Puzzle Games | Match3Games.online</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Browse our collection of free Match 3 games by category. Find your favorite puzzle games including Candy Match, Bubble Shooter, Jewel Quest and more!">
+    <meta name="keywords" content="match 3 game categories, candy games, bubble shooter games, jewel games, puzzle game categories, free online games">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://match3games.online/categories/">
+    <meta property="og:title" content="Match 3 Game Categories - Free Online Puzzle Games">
+    <meta property="og:description" content="Browse our collection of free Match 3 games by category. Find your favorite puzzle games!">
+    <meta property="og:image" content="https://match3games.online/images/categories-preview.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://match3games.online/categories/">
+    <meta name="twitter:title" content="Match 3 Game Categories - Free Online Puzzle Games">
+    <meta name="twitter:description" content="Browse our collection of free Match 3 games by category. Find your favorite puzzle games!">
+    <meta name="twitter:image" content="https://match3games.online/images/categories-preview.jpg">
+
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* 压缩CSS */
+        :root{--primary-color:#FF6B6B;--secondary-color:#4ECDC4;--accent-color:#45B7D1}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+        .game-frame{width:100%;height:300px;transition:all .3s ease}
+        .game-frame.fullscreen{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000;background:#fff}
+        .play-button {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            transition: all 0.3s ease;
+        }
+        .play-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+        .overlay.active {
+            display: block;
+        }
+        .exit-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            display: none;
+        }
+        .exit-button:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+        /* 添加分类卡片样式 */
+        .aspect-w-16 {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        .aspect-h-9 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .group:hover .group-hover\:transform {
+            transform: scale(1.05);
+        }
+        .group:hover .group-hover\:scale-105 {
+            transform: scale(1.05);
+        }
+        /* 添加响应式样式 */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr !important;
+            }
+            .text-4xl {
+                font-size: 1.8rem;
+            }
+            .p-6 {
+                padding: 1rem;
+            }
+        }
+    </style>
+
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Match 3 Game Categories",
+        "description": "Browse our collection of free Match 3 games by category",
+        "url": "https://match3games.online/categories/",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Candy Games",
+                    "url": "https://match3games.online/categories/candy-games/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Bubble Shooter",
+                    "url": "https://match3games.online/categories/bubble-shooter/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Jewel Games",
+                    "url": "https://match3games.online/categories/jewel-games/"
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="./index.html" class="text-2xl font-bold text-[--primary-color]">Match3Games</a>
+                <ul class="flex space-x-6 text-gray-600">
+                    <li><a href="./index.html" class="hover:text-[--primary-color]">Home</a></li>
+                    <li><a href="./categories.html" class="hover:text-[--primary-color]">Categories</a></li>
+                    <li><a href="./blog.html" class="hover:text-[--primary-color]">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- 面包屑导航 -->
+        <nav class="text-sm mb-8">
+            <ol class="list-none p-0 inline-flex">
+                <li class="flex items-center">
+                    <a href="./index.html" class="text-gray-600 hover:text-[--primary-color]">Home</a>
+                    <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/>
+                    </svg>
+                </li>
+                <li class="text-gray-500">Categories</li>
+            </ol>
+        </nav>
+
+        <h1 class="text-4xl font-bold text-gray-900 mb-8">Game Categories</h1>
+
+        <!-- 分类网格 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 糖果游戏分类 -->
+            <a href="./categories/candy-games.html" class="group">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="./images/categories/candy-games.jpg" alt="Candy Games" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Candy Games</h2>
+                        <p class="text-gray-600">Sweet and colorful matching fun with delicious candies!</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="text-sm text-gray-500">15 games</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-sm text-gray-500">★ 4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 泡泡射击分类 -->
+            <a href="./categories/bubble-shooter.html" class="group">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="./images/categories/bubble-shooter.jpg" alt="Bubble Shooter" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Bubble Shooter</h2>
+                        <p class="text-gray-600">Pop colorful bubbles in these exciting shooting games!</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="text-sm text-gray-500">12 games</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-sm text-gray-500">★ 4.7</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 宝石游戏分类 -->
+            <a href="./categories/jewel-games.html" class="group">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="./images/categories/jewel-games.jpg" alt="Jewel Games" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Jewel Games</h2>
+                        <p class="text-gray-600">Match sparkling jewels in these classic puzzle games!</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="text-sm text-gray-500">10 games</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-sm text-gray-500">★ 4.9</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 节日游戏分类 -->
+            <a href="./categories/holiday-games.html" class="group">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="./images/categories/holiday-games.jpg" alt="Holiday Games" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Holiday Games</h2>
+                        <p class="text-gray-600">Celebrate special occasions with themed matching games!</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="text-sm text-gray-500">8 games</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-sm text-gray-500">★ 4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 动物游戏分类 -->
+            <a href="./categories/animal-games.html" class="group">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="./images/categories/animal-games.jpg" alt="Animal Games" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Animal Games</h2>
+                        <p class="text-gray-600">Match cute animals in these adorable puzzle games!</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="text-sm text-gray-500">6 games</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-sm text-gray-500">★ 4.7</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 冒险游戏分类 -->
+            <a href="./categories/adventure-games.html" class="group">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="./images/categories/adventure-games.jpg" alt="Adventure Games" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Adventure Games</h2>
+                        <p class="text-gray-600">Embark on exciting matching adventures!</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="text-sm text-gray-500">7 games</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-sm text-gray-500">★ 4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- 分类描述 -->
+        <div class="mt-12 bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">About Our Game Categories</h2>
+            <div class="prose max-w-none text-gray-600">
+                <p class="text-lg mb-4">
+                    Our Match 3 games are carefully organized into categories to help you find exactly what you're looking for. Whether you're in the mood for sweet candy matching, exciting bubble shooting, or classic jewel matching, we have a category for you!
+                </p>
+                <p class="text-lg mb-4">
+                    Each category features a unique collection of games with similar themes and gameplay mechanics. We regularly update our categories with new games to keep the fun going!
+                </p>
+                <p class="text-lg">
+                    Can't decide which category to try? Start with our most popular games in each category, marked with a ★ rating. Happy matching!
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900">Quick Links</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="/" class="text-gray-600 hover:text-[--primary-color]">Home</a></li>
+                        <li><a href="/categories" class="text-gray-600 hover:text-[--primary-color]">Categories</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-[--primary-color]">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-gray-600">
+                        © 2024 Match3Games - The Best Free Match 3 Games Collection. New games added weekly!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 添加遮罩层 -->
+    <div class="overlay" onclick="document.querySelector('.game-frame.fullscreen').classList.remove('fullscreen'); this.classList.remove('active');"></div>
+
+    <div id="exitButton" class="exit-button">Exit Game</div>
+    <div id="fullscreenOverlay" class="fullscreen-overlay"></div>
+
+    <script>
+        function toggleGameFullscreen(iframeSelector) {
+            const iframe = document.querySelector(iframeSelector);
+            const exitButton = document.getElementById('exitButton');
+            const overlay = document.getElementById('fullscreenOverlay');
+            
+            function exitGame() {
+                iframe.classList.remove('fullscreen');
+                iframe.src = iframe.src;
+                exitButton.style.display = 'none';
+                overlay.style.display = 'none';
+            }
+
+            if (!iframe.classList.contains('fullscreen')) {
+                iframe.classList.add('fullscreen');
+                exitButton.style.display = 'block';
+                overlay.style.display = 'block';
+                
+                exitButton.onclick = exitGame;
+                overlay.onclick = exitGame;
+            } else {
+                exitGame();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const activeIframe = document.querySelector('.game-frame.fullscreen');
+                    if (activeIframe) {
+                        activeIframe.classList.remove('fullscreen');
+                        activeIframe.src = activeIframe.src;
+                        document.getElementById('exitButton').style.display = 'none';
+                        document.getElementById('fullscreenOverlay').style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
